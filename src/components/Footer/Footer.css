@@ -1,0 +1,29 @@
+.FooterSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    position: absolute;
+    width: 100%;
+    top: 95%;
+    /* left: 90%; */
+    /* border: 2px solid rgb(255, 255, 255); */
+}
+
+.FooterInfo {
+    color: white;
+    font-size: 12px;
+    margin-right: 30px;
+    /* border: 2px solid rgb(255, 255, 255); */
+}
+
+@media screen and (max-width: 425px) {
+    .FooterSection {
+        z-index: 1000;
+        align-items: center;
+    }
+    .FooterInfo {
+        margin-right: 0px;
+    }
+    
+}

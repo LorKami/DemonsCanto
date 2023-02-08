@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Jim+Nightshade&display=swap');
+/* font-family: 'Jim Nightshade', cursive; */
+
 .App {
   text-align: center;
 }
@@ -34,5 +37,193 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+
+/*========Loading Section========*/
+
+.LoadingScreen {
+  background-color: #2b0606;
+  background-image: url('./images/pattern.jpg');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow-x: hidden;
+  /* border: 2px solid rgb(17, 111, 233); */
+}
+
+.Phrase1 {
+  /* height: 200px; */
+  opacity: 0;
+  font-size: 90px;
+  margin: 0px;
+  color: white;
+  font-family: 'Jim Nightshade', cursive;
+  animation: fadeLogo 10s linear;
+}
+
+.Phrase2 {
+  /* height: 100px; */
+  font-size: 90px;
+  margin: 0px;
+  opacity: 0;
+  color: white;
+  font-family: 'Jim Nightshade', cursive;
+  animation: fadeMotto 10s linear;
+}
+
+.Preloader {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: fixed;
+  width: 97%;
+  height: 97%;
+   /* border: 2px solid rgb(255, 255, 255);  */
+}
+
+.Preloader img {
+  display: flex;
+  height: 6%;
+}
+
+@keyframes fadeNeutral {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+    /* transform: translateX(0px); */
+  }
+  50% {
+    /* opacity: 1; */
+    /* transform: translateX(-100px); */
+  }
+  70% {
+    opacity: 1;
+    /* transform: translateX(-100px); */
+  }
+  90% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeLogo {
+  0% {
+    opacity: 0;
+    transform: translateX(-80px); 
+  }
+  20% {
+    opacity: 1;
+    /* transform: translateX(0px); */
+  }
+  50% {
+    /* opacity: 1; */
+    /* transform: translateX(-100px); */
+  }
+  70% {
+    opacity: 1;
+    /* transform: translateX(-100px); */
+  }
+  90% {
+    opacity: 0;
+    /* transform: translateX(-100px); */
+  }
+}
+
+@keyframes fadeMotto {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+    transform: translateY(70px);
+  }
+  40% {
+    opacity: 1;
+    /* transform: translateX(100px); */
+  }
+  70% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+/*==========General Site Styles==========*/
+
+.App {
+  /* background-color: #490a0a;
+   height: 100vh; 
+   background-position: center; 
+   background-size: cover; 
+   z-index: 50; 
+   display: flex; 
+   flex-direction: column; 
+   align-items: center; 
+   justify-content: center;  */
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/*===========Media  Queries============*/
+
+@media screen and (max-width: 1440px) {
+  .Phrase1 {
+    font-size: 70px;
+    animation: fadeNeutral 10s linear;
+    text-align: center;
+  }
+  .Phrase2{
+    font-size: 70px;
+    text-align: center;
+    animation: fadeNeutral 10s linear;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .Phrase1 {
+    font-size: 50px;
+    animation: fadeNeutral 10s linear;
+    text-align: center;
+  }
+  .Phrase2{
+    font-size: 50px;
+    text-align: center;
+    animation: fadeNeutral 10s linear;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Phrase1 {
+    font-size: 40px;
+    animation: fadeNeutral 10s linear;
+    text-align: center;
+  }
+  .Phrase2{
+    font-size: 40px;
+    text-align: center;
+    animation: fadeNeutral 10s linear;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .Phrase1 {
+    margin-bottom: 30px;
   }
 }
